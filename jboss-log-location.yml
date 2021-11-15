@@ -13,7 +13,7 @@
       state: started
       msg: "JBoss server is not running"
 
-  - name: Jboss get log dir
+  - name: Jboss get log location
     shell: "{{jboss_home}}/bin/jboss-cli.sh --connect --commands='ls -l socket-binding-group=standard-sockets/socket-binding=http | grep bound-address' > out.txt"
     register: lsout
     tags: lsout 
