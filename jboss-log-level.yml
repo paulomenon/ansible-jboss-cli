@@ -13,7 +13,7 @@
       state: started
       msg: "JBoss server is not running"
 
-  - name: Jboss get log location
+  - name: Jboss get log level
     shell: "{{jboss_home}}/bin/jboss-cli.sh --connect --commands='/subsystem=logging/root-logger=ROOT:change-root-log-level(level={{log_level}})' > out.txt"
     register: lsout
     tags: lsout 
